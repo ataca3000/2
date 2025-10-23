@@ -1,14 +1,14 @@
 import { useState } from 'react'
-import Hero from '../componets/Hero.js'
-import Segmento from '../componets/Segmento.js'
-import CatalogoLed from '../componets/CatalogoLed.js'
-import CatalogoPostes from '../componets/CatalogoPostes.js'
-import CatalogoSolar from '../componets/CatalogoSolar.js'
-import Instalaciones from '../componets/Instalaciones.js'
-import Cotiza from '../componets/Cotiza.js'
-import QuienesSomos from '../componets/QuienesSomos.js'
-import Mapa from '../componets/Mapa.js'
-import Footer from '../componets/Footer.js'
+import Hero from '../componets/Hero'
+import Segmento from '../componets/Segmento'
+import CatalogoLed from '../componets/CatalogoLed'
+import CatalogoPostes from '../componets/CatalogoPostes'
+import CatalogoSolar from '../componets/CatalogoSolar'
+import Instalaciones from '../componets/Instalaciones'
+import Cotiza from '../componets/Cotiza'
+import QuienesSomos from '../componets/QuienesSomos'
+import Mapa from '../componets/Mapa'
+import Footer from '../componets/Footer'
 
 export default function Home() {
   const [seccionActiva, setSeccionActiva] = useState(null)
@@ -16,12 +16,14 @@ export default function Home() {
   const handleBack = () => setSeccionActiva(null)
 
   return (
-    <div className="bg-black text-white font-sans">
-    
+    <div className="bg-black text-white font-sans min-h-screen flex flex-col">
+      
+      {/* HERO */}
       {!seccionActiva && <Hero onSelect={setSeccionActiva} />}
 
+      {/* GRID DE SEGMENTOS */}
       {!seccionActiva && (
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
           <Segmento 
             titulo="LED URBANO" 
             imagen="/img/ledurbano.jpg" 
@@ -35,7 +37,7 @@ export default function Home() {
           <Segmento 
             titulo="SOLAR INTELIGENTE" 
             imagen="/img/solar.jpg" 
-            onClick={() => setSeccionActiva('Solar')}
+            onClick={() => setSeccionActiva('CatalogoSolar')}
           />
           <Segmento 
             titulo="INSTALACIONES RECIENTES" 
@@ -45,9 +47,13 @@ export default function Home() {
         </section>
       )}
 
+      {/* SECCIONES ACTIVAS */}
       {seccionActiva === 'CatalogoLed' && (
         <div className="p-6">
-          <button onClick={handleBack} className="bg-orange-600 px-4 py-2 rounded mb-4">
+          <button 
+            onClick={handleBack} 
+            className="bg-orange-600 px-4 py-2 rounded mb-4"
+          >
             ← Regresar
           </button>
           <CatalogoLed />
@@ -56,16 +62,22 @@ export default function Home() {
 
       {seccionActiva === 'CatalogoPostes' && (
         <div className="p-6">
-          <button onClick={handleBack} className="bg-orange-600 px-4 py-2 rounded mb-4">
+          <button 
+            onClick={handleBack} 
+            className="bg-orange-600 px-4 py-2 rounded mb-4"
+          >
             ← Regresar
           </button>
           <CatalogoPostes />
         </div>
       )}
 
-      {seccionActiva === 'Solar' && (
+      {seccionActiva === 'CatalogoSolar' && (
         <div className="p-6">
-          <button onClick={handleBack} className="bg-orange-600 px-4 py-2 rounded mb-4">
+          <button 
+            onClick={handleBack} 
+            className="bg-orange-600 px-4 py-2 rounded mb-4"
+          >
             ← Regresar
           </button>
           <CatalogoSolar />
@@ -74,7 +86,10 @@ export default function Home() {
 
       {seccionActiva === 'Instalaciones' && (
         <div className="p-6">
-          <button onClick={handleBack} className="bg-orange-600 px-4 py-2 rounded mb-4">
+          <button 
+            onClick={handleBack} 
+            className="bg-orange-600 px-4 py-2 rounded mb-4"
+          >
             ← Regresar
           </button>
           <Instalaciones />
@@ -83,7 +98,10 @@ export default function Home() {
 
       {seccionActiva === 'Cotiza' && (
         <div className="p-6">
-          <button onClick={handleBack} className="bg-orange-600 px-4 py-2 rounded mb-4">
+          <button 
+            onClick={handleBack} 
+            className="bg-orange-600 px-4 py-2 rounded mb-4"
+          >
             ← Regresar
           </button>
           <Cotiza />
@@ -92,7 +110,10 @@ export default function Home() {
 
       {seccionActiva === 'QuienesSomos' && (
         <div className="p-6">
-          <button onClick={handleBack} className="bg-orange-600 px-4 py-2 rounded mb-4">
+          <button 
+            onClick={handleBack} 
+            className="bg-orange-600 px-4 py-2 rounded mb-4"
+          >
             ← Regresar
           </button>
           <QuienesSomos />
@@ -101,14 +122,18 @@ export default function Home() {
 
       {seccionActiva === 'Mapa' && (
         <div className="p-6">
-          <button onClick={handleBack} className="bg-orange-600 px-4 py-2 rounded mb-4">
+          <button 
+            onClick={handleBack} 
+            className="bg-orange-600 px-4 py-2 rounded mb-4"
+          >
             ← Regresar
           </button>
           <Mapa />
         </div>
       )}
 
+      {/* FOOTER */}
       <Footer />
     </div>
   )
-              }
+}
