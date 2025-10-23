@@ -1,26 +1,24 @@
-import React from 'react'
-
 export default function Segmento({ titulo, imagen, onClick }) {
   return (
     <div 
-      onClick={onClick}
-      className="relative cursor-pointer group overflow-hidden rounded-lg shadow-lg"
+      className="bg-gray-950 rounded-lg shadow-lg overflow-hidden flex flex-col hover:scale-105 transition-transform duration-300"
     >
-      {/* Imagen de fondo */}
+      {/* Imagen */}
       <img 
         src={imagen} 
         alt={titulo} 
-        className="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+        className="w-full h-56 object-cover"
       />
 
-      {/* Overlay oscuro */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition"></div>
-
-      {/* Texto centrado */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <h2 className="text-2xl font-bold text-orange-500 group-hover:text-white transition">
-          {titulo}
-        </h2>
+      {/* Contenido */}
+      <div className="p-4 flex flex-col flex-grow justify-between text-center">
+        <h3 className="text-xl font-bold mb-4">{titulo}</h3>
+        <button 
+          onClick={onClick}
+          className="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-4 py-2 rounded transition-colors duration-300"
+        >
+          VER MÁS
+        </button>
       </div>
     </div>
   )
