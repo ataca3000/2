@@ -52,3 +52,30 @@ export default function Cotiza() {
           onChange={handleChange}
           required
           className="p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-orange-500"
+        />
+        <input 
+          type="text" 
+          name="address" 
+          placeholder="Dirección (opcional)" 
+          value={formData.address}
+          onChange={handleChange}
+          className="p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-orange-500"
+        />
+        <textarea 
+          name="message" 
+          placeholder="Mensaje o detalles de la cotización" 
+          value={formData.message}
+          onChange={handleChange}
+          required
+          className="p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-orange-500 h-32 resize-none"
+        />
+        <button 
+          onClick={handleSubmit}
+          className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded transition duration-300"
+        >
+          Enviar por WhatsApp
+        </button>
+      </div>
+    </section>
+  )
+}c
