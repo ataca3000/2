@@ -13,7 +13,12 @@ export default function Cotiza() {
   }
 
   const handleSubmit = () => {
-    const phoneNumber = "521234567890" // <-- aquí pones el número de WhatsApp de la empresa
+    if (!formData.name || !formData.contact || !formData.message) {
+      alert('Por favor completa al menos nombre, contacto y mensaje.')
+      return
+    }
+
+    const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "521234567890"
     const text = `Nueva cotización:
 - Nombre: ${formData.name}
 - Contacto: ${formData.contact}
@@ -36,6 +41,7 @@ export default function Cotiza() {
           placeholder="Nombre completo" 
           value={formData.name}
           onChange={handleChange}
+          required
           className="p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-orange-500"
         />
         <input 
@@ -44,30 +50,5 @@ export default function Cotiza() {
           placeholder="Correo o teléfono" 
           value={formData.contact}
           onChange={handleChange}
+          required
           className="p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-orange-500"
-        />
-        <input 
-          type="text" 
-          name="address" 
-          placeholder="Dirección de envío" 
-          value={formData.address}
-          onChange={handleChange}
-          className="p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-orange-500"
-        />
-        <textarea 
-          name="message" 
-          placeholder="Detalles de la cotización" 
-          value={formData.message}
-          onChange={handleChange}
-          className="p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-orange-500 h-32"
-        />
-        <button 
-          onClick={handleSubmit}
-          className="bg-orange-600 hover:bg-orange-500 transition px-6 py-3 rounded-lg font-semibold text-white shadow-lg"
-        >
-          Enviar a WhatsApp
-        </button>
-      </div>
-    </section>
-  )
-}
