@@ -24,29 +24,29 @@ export default function Hero({ onSelect }) {
         {/* Botones principales */}
         <div className="flex flex-col sm:flex-row justify-center gap-6 mb-8">
           <button 
-            onClick={() => onSelect('cotiza')}
+            onClick={() => onSelect('Cotiza')}
             className="bg-orange-600 hover:bg-orange-500 transition px-8 py-3 rounded-lg font-semibold text-white shadow-lg"
           >
             Cotiza ahora
           </button>
           <button 
-            onClick={() => onSelect('conocenos')}
+            onClick={() => onSelect('QuienesSomos')}
             className="border border-orange-600 hover:bg-orange-600 hover:text-white transition px-8 py-3 rounded-lg font-semibold text-orange-500"
           >
             Conócenos
           </button>
           <button 
-            onClick={() => onSelect('servicios')}
+            onClick={() => onSelect('Instalaciones')}
             className="bg-gray-800 hover:bg-gray-700 transition px-8 py-3 rounded-lg font-semibold text-orange-500 border border-gray-600"
           >
-            Servicios
+            Instalaciones
           </button>
         </div>
 
         {/* Icono de ubicación */}
         <div className="flex justify-center">
           <button 
-            onClick={() => onSelect('mapa')}
+            onClick={() => onSelect('Mapa')}
             className="flex flex-col items-center text-orange-500 hover:text-white transition"
           >
             <span className="text-4xl">📍</span>
