@@ -1,14 +1,14 @@
 import { useState } from 'react'
-import Hero from '../components/Hero.js'
-import Segmento from '../components/Segmento.js'
-import CatalogoLed from '../components/CatalogoLed.js'
-import CatalogoPostes from '../components/CatalogoPostes.js'
-import CatalogoSolar from '../components/CatalogoSolar.js'
-import Instalaciones from '../componets/Instalaciones.js'
-import Cotiza from '../components/Cotiza.js'
-import QuienesSomos from '../components/QuienesSomos.js'
-import Mapa from '../components/Mapa.js'
-import Footer from '../components/Footer.js'
+import Hero from '../components/Hero'
+import Segmento from '../components/Segmento'
+import CatalogoLed from '../components/CatalogoLed'
+import CatalogoPostes from '../components/CatalogoPostes'
+import CatalogoSolar from '../components/CatalogoSolar'
+import Instalaciones from '../components/Instalaciones'
+import Cotiza from '../components/Cotiza'
+import QuienesSomos from '../components/QuienesSomos'
+import Mapa from '../components/Mapa'
+import Footer from '../components/Footer'
 
 export default function Home() {
   const [seccionActiva, setSeccionActiva] = useState(null)
@@ -24,7 +24,7 @@ export default function Home() {
           <Segmento titulo="POSTES COLONIALES" imagen="/img/postes.jpg" onClick={() => setSeccionActiva('CatalogoPostes')} />
           <Segmento titulo="SOLAR INTELIGENTE" imagen="/img/solar.jpg" onClick={() => setSeccionActiva('CatalogoSolar')} />
           <Segmento titulo="INSTALACIONES RECIENTES" imagen="/img/instalaciones.jpg" onClick={() => setSeccionActiva('Instalaciones')} />
-        </section>t
+        </section>
       )}
 
       {seccionActiva === 'CatalogoLed' && (
