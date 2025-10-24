@@ -25,7 +25,7 @@ export default function Instalaciones() {
   return (
     <section className="bg-black text-white p-8 max-w-6xl mx-auto">
       <h2 className="text-3xl font-bold text-orange-500 mb-8 text-center">
-        Instalaciones
+        instalaciones
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
