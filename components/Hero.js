@@ -1,5 +1,3 @@
-  )
-}
 import Segmento from './Segmento'
 
 export default function Hero({ onSelect }) {
