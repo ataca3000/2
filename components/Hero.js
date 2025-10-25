@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 const bloques = [
   { id: 'CatalogoLed', imagen: '/img/ledurbano.jpg' },
-  { id: 'CatalogoPostes', imagen: '/img/postes.jpg' },
-  { id: 'CatalogoSolar', imagen: '/img/solar.jpg' },
+  { id: 'CatalogoPostes', imagen: '/img/postescoloniales.jpg' },
+  { id: 'CatalogoSolar', imagen: '/img/solarsmart.jpg' },
   { id: 'Instalaciones', imagen: '/img/instalaciones.jpg' }
 ]
 
@@ -11,8 +11,8 @@ export default function Hero({ onSelect }) {
   return (
     <section className='bg-black text-white min-h-screen flex flex-col md:flex-row'>
 
-      {/* 📱 Móvil: portada con botones sobre la imagen */}
-      <div className='md:hidden relative w-full h-64'>
+      {/* 📱 Móvil: portada institucional a pantalla completa con botones centrados */}
+      <div className='md:hidden relative w-full h-screen'>
         <Image
           src='/img/portada.jpg' // Asegúrate de tener esta imagen en /public/img/
           alt='Portada institucional'
@@ -20,7 +20,7 @@ export default function Hero({ onSelect }) {
           className='object-cover'
           sizes='100vw'
         />
-        <div className='absolute inset-0 flex flex-col items-center justify-center gap-3'>
+        <div className='absolute inset-0 flex flex-col items-center justify-center gap-4'>
           <button
             onClick={() => onSelect('Cotiza')}
             className='bg-orange-600 hover:bg-orange-500 text-white px-4 py-2 rounded text-sm font-semibold w-32'
@@ -75,24 +75,6 @@ export default function Hero({ onSelect }) {
         </div>
       </div>
 
-      {/* 📱 Móvil: cuadrícula de bloques debajo */}
-      <div className='md:hidden grid grid-cols-2 grid-rows-2 gap-0 mt-6'>
-        {bloques.map((bloque) => (
-          <div
-            key={bloque.id}
-            onClick={() => onSelect(bloque.id)}
-            className='cursor-pointer relative overflow-hidden hover:scale-105 transition-transform duration-300'
-          >
-            <Image
-              src={bloque.imagen}
-              alt={`Sección ${bloque.id}`}
-              fill
-              className='object-cover'
-              sizes='50vw'
-            />
-          </div>
-        ))}
-      </div>
     </section>
   )
-              }
+}
