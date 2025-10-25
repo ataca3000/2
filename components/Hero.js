@@ -7,7 +7,7 @@ export default function Hero({ onSelect }) {
       {/* Imagen principal izquierda */}
       <div 
         className="lg:w-1/2 w-full h-64 lg:h-full bg-cover bg-center relative"
-        style={{ backgroundImage: "url('/img/streetlights-bg.jpg')" }}
+        style={{ backgroundImage: 'url("/img/streetlights-bg.jpg")' }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         <div className="relative z-10 flex flex-col justify-center items-center h-full p-6 text-center">
