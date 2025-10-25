@@ -6,11 +6,11 @@ export default function Hero({ onSelect }) {
       
       {/* Imagen principal izquierda */}
       <div 
-        className="lg:w-1/2 w-full h-64 lg:h-full bg-cover bg-center relative"
+        className="lg:w-1/2 w-full h-full bg-cover bg-center relative"
         style={{ backgroundImage: 'url("/img/streetlights-bg.jpg")' }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-        <div className="relative z-10 flex flex-col justify-center items-center h-full p-6 text-center">
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="relative z-10 flex flex-col justify-center items-center h-full px-6 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-orange-500 mb-4">
             Multiservicios e Iluminación Veracruz
           </h1>
@@ -18,8 +18,8 @@ export default function Hero({ onSelect }) {
             Soluciones en alumbrado urbano, energía inteligente y diseño modular
           </p>
 
-          {/* Botones principales */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          {/* Botones principales centrados */}
+          <div className="flex flex-wrap justify-center gap-4 mb-4">
             <button 
               onClick={() => onSelect('Cotiza')}
               className="bg-orange-600 hover:bg-orange-500 transition px-6 py-2 rounded text-white font-semibold"
@@ -43,7 +43,7 @@ export default function Hero({ onSelect }) {
           {/* Ubicación */}
           <button 
             onClick={() => onSelect('Mapa')}
-            className="mt-6 text-orange-500 hover:text-white transition flex flex-col items-center"
+            className="text-orange-500 hover:text-white transition flex flex-col items-center"
           >
             <span className="text-3xl">📍</span>
             <span className="text-sm font-semibold">Ubicación</span>
