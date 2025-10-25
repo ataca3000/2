@@ -1,16 +1,23 @@
-
 export default function Segmento({ titulo, imagen, onClick }) {
   return (
-    <div className="bg-gray-950 rounded-lg shadow-lg overflow-hidden flex flex-col hover:scale-105 transition-transform duration-300">
-      <img src={imagen} alt={titulo} className="w-full h-56 object-cover" />
-      <div className="p-4 flex flex-col flex-grow justify-between text-center">
-        <h3 className="text-xl font-bold mb-4">{titulo}</h3>
-        <button
-          onClick={onClick}
-          className="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-4 py-2 rounded transition-colors duration-300"
-        >
-          VER MÁS
-        </button>
+    <div 
+      onClick={onClick}
+      className="cursor-pointer group relative overflow-hidden rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl"
+    >
+      {/* Imagen de fondo */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center transition duration-300 group-hover:brightness-75"
+        style={{ backgroundImage: `url(${imagen})` }}
+      ></div>
+
+      {/* Overlay de color */}
+      <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-300"></div>
+
+      {/* Título centrado */}
+      <div className="relative z-10 flex items-center justify-center h-full px-4 text-center">
+        <h2 className="text-xl font-bold text-orange-400 group-hover:text-white transition duration-300">
+          {titulo}
+        </h2>
       </div>
     </div>
   )
