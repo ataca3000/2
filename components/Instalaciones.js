@@ -34,9 +34,9 @@ export default function Instalaciones() {
             key={inst.id} 
             className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg flex flex-col justify-between hover:border-orange-500 transition-all"
           >
-            <div>
-              <h3 className="text-xl font-semibold text-orange-400 mb-3">
-                {inst.title}
+            <div
+            className="text-xl font-semibold text-orange-400 mb-3">
+               key={inst.title}
               </h3>
               <p className="text-gray-300 text-sm leading-relaxed">{inst.description}</p>
             </div>
