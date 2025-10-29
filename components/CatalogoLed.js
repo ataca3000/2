@@ -32,9 +32,7 @@ export default function CatalogoLed() {
       </h2>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
         {products.map((product) => (
-          <div key={product.id}>
-          <div className='relative bg-gray-800 rounded-lg overflow-hidden shadow-lg'
-          
+          <div key={product.id} className='relative bg-gray-800 rounded-lg overflow-hidden shadow-lg'>
             <Image
               src={product.image}
               alt={product.title}
@@ -79,5 +77,3 @@ export default function CatalogoLed() {
     </section>
   )
 }
-  )
-                    }
