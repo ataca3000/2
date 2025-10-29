@@ -17,7 +17,7 @@ export default function Home() {
   const [seccionActiva] = useState(null)
 
   // Función para volver a la portada
-  const [handleBack] => setSeccionActiva(null)
+  const [handleBack] = setSeccionActiva(null)
 
   // Renderizado condicional según la sección activa
   return (
