@@ -1,4 +1,3 @@
-// Importación de React y estado
 import { useState } from 'react'
 
 // Importación de componentes modulares
@@ -14,10 +13,10 @@ import Mapa from '../components/Mapa'
 // Componente principal de la página
 export default function Home() {
   // Estado para controlar qué sección está activa
-  const [seccionActiva] = useState(null)
+  const [seccionActiva, setSeccionActiva] = useState(null)
 
   // Función para volver a la portada
-  const [handleBack] = setSeccionActiva(null)
+  const handleBack = () => setSeccionActiva(null)
 
   // Renderizado condicional según la sección activa
   return (
