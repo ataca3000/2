@@ -30,19 +30,21 @@ export default function Instalaciones() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {instalacionesData.map((inst) => (
-          <div 
-            key={inst.id} 
+          <div
+            key={inst.id}
             className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg flex flex-col justify-between hover:border-orange-500 transition-all"
           >
-            <div
-            className="text-xl font-semibold text-orange-400 mb-3">
-               key={inst.title}
+            <div>
+              <h3 className="text-xl font-semibold text-orange-400 mb-3">
+                {inst.title}
               </h3>
-              <p className="text-gray-300 text-sm leading-relaxed">{inst.description}</p>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                {inst.description}
+              </p>
             </div>
-            <a 
-              href={inst.pdf} 
-              target="_blank" 
+            <a
+              href={inst.pdf}
+              target="_blank"
               rel="noopener noreferrer"
               className="mt-6 bg-orange-600 hover:bg-orange-500 text-white px-4 py-2 rounded-lg text-center font-semibold transition"
             >
