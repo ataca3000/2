@@ -28,10 +28,11 @@ export default function Hero({ onSelect }) {
             Cotiza
           </button>
           <button
-            onClick={() => onSelect('Servicios')}
+            // ⚠️ Cambia "Servicios" por "QuienesSomos" o la sección que quieras mostrar
+            onClick={() => onSelect('QuienesSomos')}
             className='border border-orange-600 hover:bg-orange-600 hover:text-white text-orange-500 px-4 py-2 rounded text-sm font-semibold w-32'
           >
-            Servicios
+            Nosotros
           </button>
         </div>
       </div>
@@ -55,16 +56,18 @@ export default function Hero({ onSelect }) {
         ))}
       </div>
 
+      {/* 🖥️ Portada derecha con botones */}
       <div className='hidden md:flex w-1/2 flex-col items-center justify-center p-6 gap-6'>
         <h1 className='text-4xl font-bold text-orange-500 text-center'>
           Multiservicios e Iluminación Veracruz
         </h1>
         <div className='flex flex-col items-center gap-4 mt-4'>
           <button
-            onClick={() => onSelect('Servicios')}
+            // ⚠️ Igual que arriba, cambia "Servicios" por "QuienesSomos" si quieres
+            onClick={() => onSelect('QuienesSomos')}
             className='bg-orange-600 hover:bg-orange-500 text-white px-4 py-2 rounded text-sm font-semibold'
           >
-            Servicios
+            Nosotros
           </button>
           <button
             onClick={() => onSelect('Cotiza')}
