@@ -1,5 +1,3 @@
-
-}
 import { useState } from 'react'
 
 // Importación de componentes modulares
