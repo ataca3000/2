@@ -1,4 +1,17 @@
-export default function Home() {
+import { useState } from 'react'
+
+// Importación de componentes modulares
+import Hero from '../components/Hero'
+import CatalogoLed from '../components/CatalogoLed'
+import CatalogoPostes from '../components/CatalogoPostes'
+import CatalogoSolar from '../components/CatalogoSolar'
+import Instalaciones from '../components/Instalaciones'
+import Cotiza from '../components/Cotiza'
+import QuienesSomos from '../components/QuienesSomos'
+import Mapa from '../components/Mapa'
+
+// Componente principal de la página
+export default function Home(Hero) {
   const [seccionActiva, setSeccionActiva] = useState(null)
 
   const handleBack = () => setSeccionActiva(null)
@@ -35,7 +48,10 @@ export default function Home() {
         </nav>
       </header>
 
+      {/* Portada institucional */}
       {!seccionActiva && <Hero onSelect={setSeccionActiva} />}
+
+      {/* Renderizado dinámico */}
       {seccionActiva && secciones[seccionActiva]}
     </div>
   )
