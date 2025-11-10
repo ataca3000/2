@@ -27,19 +27,21 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-black text-white font-sans min-h-screen flex flex-col">
+    <div className='bg-black text-white font-sans min-h-screen flex flex-col'>
       {/* Encabezado institucional */}
-      <header className="bg-gray-900 p-4 flex justify-between items-center shadow-md">
+      <header className='bg-gray-900 p-4 flex justify-between items-center shadow-md'>
         <h1
-          className="text-xl font-bold text-orange-500 cursor-pointer"
+          className='text-xl font-bold text-orange-500 cursor-pointer'
           onClick={handleBack}
         >
-          <nav className="flex gap-4">
+          Multiservicios Veracruz
+        </h1>
+        <nav className='flex gap-4'>
           {Object.keys(secciones).map((key) => (
             <button
               key={key}
               onClick={() => setSeccionActiva(key)}
-              className="hover:text-orange-400"
+              className='hover:text-orange-400'
             >
               {key.replace('Catalogo', '').replace('QuienesSomos', 'Nosotros')}
             </button>
@@ -54,4 +56,4 @@ export default function Home() {
       {seccionActiva && secciones[seccionActiva]}
     </div>
   )
-}
+          }
