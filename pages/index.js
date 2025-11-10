@@ -34,9 +34,7 @@ export default function Home() {
           className="text-xl font-bold text-orange-500 cursor-pointer"
           onClick={handleBack}
         >
-          Lumi-Nova
-        </h1>
-        <nav className="flex gap-4">
+          <nav className="flex gap-4">
           {Object.keys(secciones).map((key) => (
             <button
               key={key}
@@ -45,3 +43,15 @@ export default function Home() {
             >
               {key.replace('Catalogo', '').replace('QuienesSomos', 'Nosotros')}
             </button>
+          ))}
+        </nav>
+      </header>
+
+      {/* Portada institucional con layout visual */}
+      {!seccionActiva && <Hero onSelect={setSeccionActiva} />}
+
+      {/* Renderizado dinámico de secciones */}
+      {seccionActiva && secciones[seccionActiva]}
+    </div>
+  )
+}
