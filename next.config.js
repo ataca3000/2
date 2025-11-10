@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [], // aquí puedes agregar dominios externos si usas imágenes de fuera
+    domains: ['2-35rver81r-luis-projects-c4dfb2af.vercel.app'],
   },
 }
 
