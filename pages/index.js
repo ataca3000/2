@@ -11,7 +11,7 @@ import QuienesSomos from '../components/QuienesSomos'
 import Mapa from '../components/Mapa'
 
 // Componente principal de la página
-export default function Home(Hero) {
+export default function Home() {
   const [seccionActiva, setSeccionActiva] = useState(null)
 
   const handleBack = () => setSeccionActiva(null)
