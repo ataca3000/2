@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['2-35rver81r-luis-projects-c4dfb2af.vercel.app'],
+    domains: https: '2-g664-1l96fovoa-felipes-projects-e1164021.vercel.app'],
   },
 }
 
